@@ -1,0 +1,224 @@
+/* ESTILO GERAL */
+
+.titulo-azul-strong {
+    color: #0054a6;
+}
+
+/* LOGO */
+.bigslam-logo {
+    margin-bottom: -12px;
+    padding-top: 17px;
+}
+
+/* MENU */
+
+.bigslam-navigation .sf-menu > li > a {
+    padding-bottom: 58px;
+}
+
+.bigslam-navigation {
+    padding-top: 60px;
+}
+
+/* BANNER */
+
+.titulo-banner{
+    background: linear-gradient(to top, #15bce6, #0747ad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    /* color: #075ae0; */
+}
+
+/* SOBRE */
+
+.titulo-fifa{
+    color: #005391;
+}
+
+.gdlr-core-body .gdlr-core-button.gdlr-core-button-gradient.botao-matricula{
+    font-size: 13px;
+    text-transform: uppercase;
+    background: #0054a6;
+}
+
+.gdlr-core-body .gdlr-core-button.gdlr-core-button-gradient.botao-matricula:hover{
+    background: #20b3d8;
+}
+
+
+.botao-matricula:hover{
+    background: #fff;
+}
+
+/* CATEGORIAS */
+
+.gdlr-core-feature-box-item .gdlr-core-feature-box-item-title{
+    margin-bottom: 32px;
+}
+
+
+.gdlr-core-feature-box.gdlr-core-js.gdlr-core-feature-box-type-none {
+    background-color: #02264b;
+    border: 4px solid #0cc0df;
+    border-radius: 5px;
+    padding: 20px 40px 0px 40px;
+
+    transition: all .25s ease;
+}
+
+.gdlr-core-feature-box.gdlr-core-js.gdlr-core-feature-box-type-none:hover{
+    transform: translateY(-12px);
+    box-shadow: 0px 22px 20px rgba(0, 0, 0, 0.8),
+        0 0 50px rgba(14, 179, 255, 0.479);
+    border-color: #007fc3;
+}
+
+.categoria-box{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.gdlr-core-feature-box-content.gdlr-core-sync-height-content > .gdlr-core-feature-box-item-caption{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.gdlr-core-feature-box-item-content.categoria-info i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.gdlr-core-feature-box-item-content.categoria-info p{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.gdlr-core-button-item.gdlr-core-item-pdlr.gdlr-core-center-align.btn-saiba-mais{
+    padding-bottom: 20px;
+}
+
+.gdlr-core-button.gdlr-core-button-solid.gdlr-core-button-no-border{
+    margin-top: 10px;
+}
+
+.btn-saiba-mais .gdlr-core-button{
+    transition:
+        transform .5s ease,
+        box-shadow .25s ease;
+}
+
+.btn-saiba-mais .gdlr-core-button:hover{
+    background-color: #0054a6;
+    transform: scale(1.10);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
+        inset 0px -10px 28px rgb(21, 94, 220);
+}
+
+
+/* PARTIDAS & RESULTADOS */
+
+.bigslam-sp-event-featured-holder .bigslam-sp-event-featured-top{
+    background-image: url(../upload/blue-abstract-background.jpg);
+}
+
+.bigslam-sp-event-featured-top .bigslam-sp-team-logo img {
+    border-radius: 50px;
+    max-height: 105px;
+    max-width: 85%;
+}
+
+.bigslam-sp-event-featured-list .bigslam-sp-team-logo img {
+    border-radius: 50px;
+}
+
+.bigslam-sp-event-widget-list .bigslam-sp-team-logo img {
+    max-width: 25px;
+    min-height: 17px;
+}
+
+.resultado-placar-left {
+    margin-right: 20px;
+}
+
+.resultado-placar-right {
+    margin-left: 20px;
+}
+
+/* ÚLTIMA PARTIDA */
+
+.sp-league-table .team-logo img {
+    min-height: 21px;
+    margin-top: 4px;
+}
+
+.gdlr-core-sp-featured-event-item .bigslam-sp-event-featured-top .bigslam-sp-team-logo img {
+    max-height: 90px;
+    border-radius: 4px;
+}
+
+/* GRUPOS & CALENDÁRIO */
+
+.sp-league-table .logo-pais-6 img {
+    height: 24px;
+}
+
+.gdlr-core-page-builder-body p{
+    margin-bottom: 40px;
+}
+
+/* SCHEDULE */
+
+.bigslam-page-title-wrap {
+    background-image: url(/upload/wc26-banner2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bigslam-page-title-wrap 
+.bigslam-page-title {
+    /* background: linear-gradient(to right, #0d4fb9 27.5%, #df1047, #07b880 74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  */
+    color: #f33080; 
+}
+
+.bigslam-body a {
+    color: #dfdbdb;
+}
+
+.bigslam-body a:hover {
+    color: #f02e61;
+}
+
+#map {
+    height: 500px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: #0f0404;
+    color: #07b880;
+    box-shadow: 3px 6px 14px rgba(0, 0, 0, 0.7);
+}
+
+/* .leaflet-container a.leaflet-popup-close-button {
+    color: #fff;
+    font: 20px / 24px Tahoma, Verdana, sans-serif;
+} */
+
+.leaflet-popup-content strong p{
+    margin-bottom: 13px;
+    color: #e9e4e4;
+}
+
+.sp-staff-details dd img{
+    width: 23px;
+}
+
+.sp-template-details dl {
+    margin-bottom: 90px !important;
+}
+
+/* CONTATO */
