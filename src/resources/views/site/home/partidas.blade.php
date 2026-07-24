@@ -1,7 +1,7 @@
                     <!-- RESULTADOS -->
                     <div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 160px 0px;">
                         <div class="gdlr-core-pbf-background-wrap">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/empty-ice-skating-venue.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.1"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{ asset('atlas/upload/empty-ice-skating-venue.jpg') }}) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.1"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">

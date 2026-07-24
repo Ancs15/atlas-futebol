@@ -1,7 +1,7 @@
-    <script type='text/javascript' src='js/jquery/jquery.js'></script>
-    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
-    <script type='text/javascript' src='plugins/revslider/public/assets/js/revolution.tools.min.js'></script>
-    <script type='text/javascript' src='plugins/revslider/public/assets/js/rs6.min.js'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/jquery.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/jquery-migrate.min.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/revolution.tools.min.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/rs6.min.js") }}'></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var SnazzyDataForSnazzyMaps = [];
@@ -24,7 +24,7 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='plugins/snazzy-maps/snazzymaps.js'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/snazzymaps.js") }}'></script>
 
     <!-- SCRIPT DO REV SLIDER -->
     <script type="text/javascript">
@@ -50,7 +50,7 @@
     </script>
 
 
-    <script type='text/javascript' src='plugins/goodlayers-core/plugins/script.js'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/script.js") }}'></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var gdlr_core_pbf = {
@@ -64,8 +64,8 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='plugins/goodlayers-core/include/js/page-builder.js'></script>
-    <script type='text/javascript' src='plugins/sportspress/assets/js/jquery.dataTables.min.js'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/page-builder.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/jquery.dataTables.min.js") }}'></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var localized_strings = {
@@ -78,8 +78,8 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='plugins/sportspress/assets/js/sportspress.js'></script>
-    <script type='text/javascript' src='js/jquery/ui/effect.min.js'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/sportspress.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/jquery/ui/effect.min.js") }}'></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var bigslam_script_core = {
@@ -87,8 +87,8 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='js/plugins.js'></script>
-    <script type='text/javascript' src='plugins/google-map-plugin/assets/js/maps.js'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/plugins.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/maps.js") }}'></script>
     <script type="text/javascript">
         setREVStartSize({
             c: 'rev_slider_1_1',

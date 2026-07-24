@@ -4,7 +4,7 @@
             <div class="bigslam-mobile-header-container bigslam-container">
                 <div class="bigslam-logo  bigslam-item-pdlr">
                     <div class="bigslam-logo-inner">
-                        <a href="{{route('home')}}"><img src="upload/ATLAS-halflogo.png" alt="Logo" width="200" height="191"></a>
+                        <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/ATLAS-halflogo.png') }}" alt="Logo" width="200" height="191"></a>
                     </div>
                 </div>
                 <div class="bigslam-mobile-menu-right">
@@ -229,7 +229,7 @@
                         <div class="bigslam-header-container-inner clearfix">
                             <div class="bigslam-logo  bigslam-item-pdlr">
                                 <div class="bigslam-logo-inner">
-                                    <a href="{{route('home')}}"><img src="upload/ATLAS-halflogo.png" alt="Logo" width="200" height="191"></a>
+                                    <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/ATLAS-halflogo.png') }}" alt="Logo" width="200" height="191"></a>
                                 </div>
                             </div>
                             <div class="bigslam-navigation bigslam-item-pdlr clearfix ">

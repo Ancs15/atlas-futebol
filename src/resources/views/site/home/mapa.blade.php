@@ -1,6 +1,6 @@
                     <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
                         <div class="gdlr-core-pbf-background-wrap">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-blog4.png) ;background-size: cover ;background-position: bottom center ;" data-parallax-speed="0.05"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(atlas/upload/bg-blog4.png) ;background-size: cover ;background-position: bottom center ;" data-parallax-speed="0.05"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">

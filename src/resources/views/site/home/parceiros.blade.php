@@ -1,6 +1,6 @@
                     <div class="gdlr-core-pbf-wrapper " style="padding: 200px 0px 200px 0px;">
                         <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;">
-                            <div class="gdlr-core-pbf-background gdlr-core-js" style="background-image: url(upload/bg-sponsor.jpg) ;background-repeat: no-repeat ;background-position: center ;" data-parallax-speed="0.05"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-js" style="background-image: url({{ asset('atlas/upload/bg-sponsor.jpg') }}) ;background-repeat: no-repeat ;background-position: center ;" data-parallax-speed="0.05"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -22,7 +22,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('upload/sponsor-1.png')}}" alt="" width="121" height="60" title="sponsor-1"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('atlas/upload/sponsor-1.png')}}" alt="" width="121" height="60" title="sponsor-1"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -34,7 +34,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('upload/sponsor-2.png')}}" alt="" width="142" height="60" title="sponsor-2"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('atlas/upload/sponsor-2.png')}}" alt="" width="142" height="60" title="sponsor-2"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -46,7 +46,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('upload/sponsor-3.png')}}" alt="" width="141" height="50" title="sponsor-3"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('atlas/upload/sponsor-3.png')}}" alt="" width="141" height="50" title="sponsor-3"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +57,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('upload/sponsor-4.png')}}" alt="" width="183" height="60" title="sponsor-4"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{asset('atlas/upload/sponsor-4.png')}}" alt="" width="183" height="60" title="sponsor-4"></div>
                                                 </div>
                                             </div>
                                         </div>

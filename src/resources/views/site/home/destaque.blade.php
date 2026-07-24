@@ -9,7 +9,7 @@
                                     <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" data-skin="hp3-skin" id="gdlr-core-column-50640" style="z-index: 999 ;">
                                         <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="margin: -180px 0px 0px 0px;padding: 60px 0px 60px 0px;">
                                             <div class="gdlr-core-pbf-background-wrap" style="border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;-webkit-border-radius: 5px 5px 5px 5px;">
-                                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/blue-red-background.jpg) ; background-position: center ;" data-parallax-speed="0.1"></div>
+                                                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{asset('atlas/upload/blue-red-background.jpg')}}) ; background-position: center ;" data-parallax-speed="0.1"></div>
                                             </div>
                                             <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                                 <div class="gdlr-core-pbf-element">

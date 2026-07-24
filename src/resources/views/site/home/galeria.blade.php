@@ -3,7 +3,7 @@
 
 
                         <div class="gdlr-core-pbf-background-wrap" style="background-color: #f7f7f7 ;">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-ig-2.jpg) ;background-repeat: no-repeat ;background-position: center ;" data-parallax-speed="0.05"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{asset('atlas/upload/bg-ig-2.jpg')}}) ;background-repeat: no-repeat ;background-position: center ;" data-parallax-speed="0.05"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
