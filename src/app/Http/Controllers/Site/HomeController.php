@@ -6,6 +6,8 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 // CHAMA O ARQUIVO BANNER
 use App\Models\Banner;
+// CHAMA O ARQUIVO CATEGORIA
+use App\Models\Categoria;
 
 // CRIA A CLASSE HOME CONTROLLER
 class HomeController extends Controller {
@@ -16,8 +18,14 @@ class HomeController extends Controller {
         // CHAMA O ARQUIVO BANNER
         $listaBanners = Banner::where('status_banner', 'ATIVO')->get();
 
-        // RETORNA A PÁGINA HOME COM A LISTA DE BANNERS
-        return view('site.home.home', compact('listaBanners'));
+        // CHAMA O ARQUIVO CATEGORIA
+        $listaCategorias = Categoria::where('status_categoria', 'ATIVO')->get();
+
+        // Verifica se a lista de categorias está funcionando
+        // dd($listaCategorias);
+
+        // RETORNA A PÁGINA HOME COM A LISTA DE BANNERS E CATEGORIAS
+        return view('site.home.home', compact('listaBanners', 'listaCategorias'));
     }
 
 }

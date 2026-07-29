@@ -10,76 +10,33 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-feature-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align categoria-box">
-                                                    <div class="gdlr-core-feature-box gdlr-core-js gdlr-core-feature-box-type-none" data-sync-height="boxes-1" data-sync-height-center="">
-                                                        <div class="gdlr-core-feature-box-content gdlr-core-sync-height-content">
-                                                            <h3 class="gdlr-core-feature-box-item-title" style="font-size: 19px ;">CATEGORIA SUB-9</h3>
-                                                            <i class="gdlr-core-feature-box-item-icon fa5 fa5-futbol" style="font-size: 48px ;"></i>
-                                                            <div class="gdlr-core-feature-box-item-caption gdlr-core-title-font"><strong>7 À 9 ANOS.</strong></div>
-                                                            <div class="gdlr-core-feature-box-item-content categoria-info" style="font-size: 14px ;">
-                                                                <p>Introdução ao futebol, coordenação motora e fundamentos básicos.</p>
-                                                                <p><i class="fa5 fa5-running"></i>TREINOS: <strong>Terça-Feira</strong> e <strong>Quinta-Feira</strong>.</p>
-                                                                <p><i class="fa5 fa5-clock"></i>HORÁRIO: <strong>18:00</strong> às <strong>19:30</strong></p>
-                                                                <div class="gdlr-core-sync-height-offset" style="height: 25px;"></div>
-                                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-center-align btn-saiba-mais" data-sync-height-offset><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{route('home')}}" id="gdlr-core-button-id-51465"><span class="gdlr-core-content">Saiba Mais</span></a></div>
+
+                                @foreach($listaCategorias as $linha)
+                                    <div class="gdlr-core-pbf-column gdlr-core-column-20">
+                                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                                <div class="gdlr-core-pbf-element">
+                                                    <div class="gdlr-core-feature-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align categoria-box">
+                                                        <div class="gdlr-core-feature-box gdlr-core-js gdlr-core-feature-box-type-none" data-sync-height="boxes-1" data-sync-height-center="">
+                                                            <div class="gdlr-core-feature-box-content gdlr-core-sync-height-content">
+                                                                <h3 class="gdlr-core-feature-box-item-title" style="font-size: 19px ;">{{ $linha->nome_categoria }}</h3>
+                                                                <i class="gdlr-core-feature-box-item-icon fa5 fa5-futbol" style="font-size: 48px ;"></i>
+                                                                <div class="gdlr-core-feature-box-item-caption gdlr-core-title-font"><strong>{{ $linha->faixa_etaria_categoria }}</strong></div>
+                                                                <div class="gdlr-core-feature-box-item-content categoria-info" style="font-size: 14px ;">
+                                                                    <p>{{ $linha->descricao_foco_categoria }}</p>
+                                                                    <p><i class="fa5 fa5-running"></i>TREINOS: <strong>Terça-Feira</strong> e <strong>Quinta-Feira</strong>.</p>
+                                                                    <p><i class="fa5 fa5-clock"></i>HORÁRIO: <strong>{{ $linha->horario_inicio_categoria }}</strong> às <strong>{{ $linha->horario_fim_categoria }}</strong></p>
+                                                                    <div class="gdlr-core-sync-height-offset" style="height: 25px;"></div>
+                                                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-center-align btn-saiba-mais" data-sync-height-offset><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{route('home')}}" id="gdlr-core-button-id-51465"><span class="gdlr-core-content">Saiba Mais</span></a></div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-feature-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align categoria-box">
-                                                    <div class="gdlr-core-feature-box gdlr-core-js gdlr-core-feature-box-type-none" data-sync-height="boxes-1" data-sync-height-center="">
-                                                        <div class="gdlr-core-feature-box-content gdlr-core-sync-height-content">
-                                                            <h3 class="gdlr-core-feature-box-item-title" style="font-size: 19px ;">CATEGORIA SUB-9</h3>
-                                                            <i class="gdlr-core-feature-box-item-icon fa5 fa5-futbol" style="font-size: 48px ;"></i>
-                                                            <div class="gdlr-core-feature-box-item-caption gdlr-core-title-font"><strong>7 À 9 ANOS.</strong></div>
-                                                            <div class="gdlr-core-feature-box-item-content categoria-info" style="font-size: 14px ;">
-                                                                <p>Introdução ao futebol, coordenação motora e fundamentos básicos.</p>
-                                                                <p><i class="fa5 fa5-running"></i>TREINOS: <strong>Terça-Feira</strong> e <strong>Quinta-Feira</strong>.</p>
-                                                                <p><i class="fa5 fa5-clock"></i>HORÁRIO: <strong>18:00</strong> às <strong>19:30</strong></p>
-                                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-center-align btn-saiba-mais" data-sync-height-offset><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{route('home')}}" id="gdlr-core-button-id-51465"><span class="gdlr-core-content">Saiba Mais</span></a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gdlr-core-pbf-column gdlr-core-column-20">
-                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
-                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
-                                            <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-feature-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align categoria-box">
-                                                    <div class="gdlr-core-feature-box gdlr-core-js gdlr-core-feature-box-type-none" data-sync-height="boxes-1" data-sync-height-center="">
-                                                        <div class="gdlr-core-feature-box-content gdlr-core-sync-height-content">
-                                                            <h3 class="gdlr-core-feature-box-item-title" style="font-size: 19px ;">CATEGORIA SUB-9</h3>
-                                                            <i class="gdlr-core-feature-box-item-icon fa5 fa5-futbol" style="font-size: 48px ;"></i>
-                                                            <div class="gdlr-core-feature-box-item-caption gdlr-core-title-font"><strong>7 À 9 ANOS.</strong></div>
-                                                            <div class="gdlr-core-feature-box-item-content categoria-info" style="font-size: 14px ;">
-                                                                <p>Introdução ao futebol, coordenação motora e fundamentos básicos.</p>
-                                                                <p><i class="fa5 fa5-running"></i>TREINOS: <strong>Terça-Feira</strong> e <strong>Quinta-Feira</strong>.</p>
-                                                                <p><i class="fa5 fa5-clock"></i>HORÁRIO: <strong>18:00</strong> às <strong>19:30</strong></p>
-                                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-center-align btn-saiba-mais" data-sync-height-offset><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-no-border" href="{{route('home')}}" id="gdlr-core-button-id-51465"><span class="gdlr-core-content">Saiba Mais</span></a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </div>                                
+                                @endforeach
                             </div>
                         </div>
                     </div>
