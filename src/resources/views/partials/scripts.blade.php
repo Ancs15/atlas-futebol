@@ -79,7 +79,8 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src='{{ asset("atlas/js/sportspress.js") }}'></script>
-    <script type='text/javascript' src='{{ asset("atlas/js/jquery/ui/effect.min.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/effect.min.js") }}'></script>
+    <script type='text/javascript' src='{{ asset("atlas/js/plugins.js") }}'></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var bigslam_script_core = {
@@ -87,7 +88,6 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='{{ asset("atlas/js/plugins.js") }}'></script>
     <script type='text/javascript' src='{{ asset("atlas/js/maps.js") }}'></script>
     <script type="text/javascript">
         setREVStartSize({
@@ -189,4 +189,4 @@
         }
     </script>
 
-    <script src="js/script-principal.js"></script>
+    <script src="{{ asset('atlas/js/script-principal.js') }}"></script>
