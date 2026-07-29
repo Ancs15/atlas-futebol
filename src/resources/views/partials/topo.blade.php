@@ -28,7 +28,7 @@
                         <div class="bigslam-mm-menu-wrap bigslam-navigation-font" id="bigslam-mobile-menu" data-slide="right">
                             <ul id="menu-main-navigation" class="m-menu">
                                 <li class="menu-item menu-item-home current-menu-item"><a href="{{route('home')}}" aria-current="page">Home</a></li>
-                                <li class="menu-item menu-item-has-children"><a href="{{('home')}}">Sobre</a>
+                                <li class="menu-item menu-item-has-children"><a href="{{route('sobre')}}">Sobre</a>
                                     <!-- <ul class="sub-menu">
                                         <li class="menu-item"><a href="schedule.html">Schedule – Default Style</a></li>
                                         <li class="menu-item"><a href="{{('home')}}">Schedule – Featured Style</a></li>
@@ -236,7 +236,7 @@
                                 <div class="bigslam-main-menu" id="bigslam-main-menu">
                                     <ul id="menu-main-navigation-1" class="sf-menu">
                                         <li class="menu-item menu-item-home current-menu-item bigslam-normal-menu"><a href="{{route('home')}}">Home</a></li>
-                                        <li class="menu-item menu-item-has-children bigslam-normal-menu"><a href="{{('home')}}" class="sf-with-ul-pre">Sobre</a>
+                                        <li class="menu-item menu-item-has-children bigslam-normal-menu"><a href="{{route('sobre')}}" class="sf-with-ul-pre">Sobre</a>
                                             <!-- SUB-MENU DESATIVADO -->
 
                                             <!-- <ul class="sub-menu">
