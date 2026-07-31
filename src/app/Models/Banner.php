@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\DAtabase\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Banner extends Model {
     protected $table = 'tbl_banner';

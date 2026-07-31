@@ -8,6 +8,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Banner;
 // CHAMA O ARQUIVO CATEGORIA
 use App\Models\Categoria;
+use App\Models\Depoimentos;
+use App\Models\Galeria;
+use App\Models\Parceiros;
 
 // CRIA A CLASSE HOME CONTROLLER
 class HomeController extends Controller {
@@ -16,7 +19,7 @@ class HomeController extends Controller {
     public function home() {
 
         // CHAMA O ARQUIVO BANNER
-        $listaBanners = Banner::where('status_banner', 'ATIVO')->get();
+        $listaBanners = Banner::where('status_banner', 'ATIVO')->inRandomOrder()->get();
 
         // CHAMA O ARQUIVO CATEGORIA
         $listaCategorias = Categoria::where('status_categoria', 'ATIVO')->get();
@@ -24,8 +27,21 @@ class HomeController extends Controller {
         // Verifica se a lista de categorias está funcionando
         // dd($listaCategorias);
 
+        $listaParceiros = Parceiros::where('status_parceiros', 'ATIVO')->orderBy('nome_parceiros', 'ASC')->get();
+        // dd($listaParceiros);
+
+        $listaGaleria = Galeria::where('status_galeria', 'ATIVO')->orderBy('titulo_galeria', 'ASC')->get();
+        // dd($listaGaleria);
+
+        $listaDepo = Depoimentos::with('DepoResponsavel')
+                        ->where('status_depoimentos', 'APROVADO')
+                        ->inRandomOrder()
+                        ->get();
+
+        // dd($listaDepo->toArray());
+
         // RETORNA A PÁGINA HOME COM A LISTA DE BANNERS E CATEGORIAS
-        return view('site.home.home', compact('listaBanners', 'listaCategorias'));
+        return view('site.home.home', compact('listaBanners', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaDepo'));
     }
 
 }

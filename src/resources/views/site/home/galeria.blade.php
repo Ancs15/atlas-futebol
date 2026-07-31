@@ -26,31 +26,16 @@
                                                 <div class="gdlr-core-gallery-item gdlr-core-item-pdb clearfix  gdlr-core-gallery-item-style-grid gdlr-core-item-pdlr " style="padding-bottom: 0px ;">
                                                     <div class="gdlr-core-flexslider flexslider gdlr-core-js-2  gdlr-core-v1" data-type="carousel" data-column="3" data-move="1" data-nav="navigation-outer">
                                                         <ul class="slides">
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 7px;-moz-border-radius: 7px;-webkit-border-radius: 7px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{{asset('atlas/upload/banner-principal.jpg')}}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{asset('atlas/upload/banner-principal.jpg')}}" alt="" width="550" height="500" title="shutterstock_433241116"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 7px;-moz-border-radius: 7px;-webkit-border-radius: 7px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{{asset('atlas/upload/banner-principal.jpg')}}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{asset('atlas/upload/banner-principal.jpg')}}" alt="" width="550" height="500" title="shutterstock_433241107"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 7px;-moz-border-radius: 7px;-webkit-border-radius: 7px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{{asset('atlas/upload/banner-principal.jpg')}}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{asset('atlas/upload/banner-principal.jpg')}}" alt="" width="550" height="500" title="pic-gel-1"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 7px;-moz-border-radius: 7px;-webkit-border-radius: 7px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{{asset('atlas/upload/banner-principal.jpg')}}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{asset('atlas/upload/banner-principal.jpg')}}" alt="" width="550" height="500" title="Untitled-12"></a>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 7px;-moz-border-radius: 7px;-webkit-border-radius: 7px;">
-                                                                    <a class="gdlr-core-ilightbox gdlr-core-js " href="{{asset('atlas/upload/banner-principal.jpg')}}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{asset('atlas/upload/banner-principal.jpg')}}" alt="" width="550" height="500" title="pic-gel-2"></a>
-                                                                </div>
-                                                            </li>
+                                                            @foreach ($listaGaleria as $linha)
+                                                                <li class="gdlr-core-item-mglr">
+                                                                    <div class="gdlr-core-gallery-list gdlr-core-media-image" style="border-radius: 7px;-moz-border-radius: 7px;-webkit-border-radius: 7px;">
+                                                                        <a class="gdlr-core-ilightbox gdlr-core-js " href="{{asset('atlas/upload/' . $linha->img_galeria )}}" data-ilightbox-group="gdlr-core-img-group-1" data-type="image"><img src="{{asset('atlas/upload/' . $linha->img_galeria )}}" alt="{{ $linha->titulo_galeria }}" width="550" height="500" title="shutterstock_433241116"></a>
+                                                                    </div>
+                                                                </li>    
+                                                            @endforeach
+
+
+                                                            
                                                         </ul>
                                                     </div>
                                                 </div>
