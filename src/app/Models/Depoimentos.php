@@ -23,7 +23,7 @@ Class Depoimentos extends Model {
     ];
 
     public function DepoResponsavel() {
-        return $this->belongsTo(Responsavel::class, 'id_responsavel', 'id_cliente');
+        return $this->belongsTo(Responsavel::class, 'id_cliente', 'id_responsavel');
     }    
 
 }

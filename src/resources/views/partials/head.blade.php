@@ -26,7 +26,7 @@
     <!-- LINKS DE ESTILO -->
 
     <link rel='stylesheet' href='{{ asset("atlas/css/font-awesome.css") }}' type='text/css' media='all'>
-    <!-- <link rel='stylesheet' href='atlas/css/elegant/elegant-font.css' type='text/css' media='all'> -->
+    <link rel='stylesheet' href='{{ asset("atlas/css/elegant-font.css") }}' type='text/css' media='all'>
     <link rel='stylesheet' href='{{ asset("atlas/css/style.css") }}' type='text/css' media='all'>
     <link rel='stylesheet' href='{{ asset("atlas/css/page-builder.css") }}' type='text/css' media='all'>
     <link rel='stylesheet' href='{{ asset("atlas/css/fa5.css") }}' type='text/css' media='all'>

@@ -10,61 +10,37 @@
                                         <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 gdlr-core-nav-style-middle-large" data-type="carousel" data-column="1" data-nav="navigation" data-vcenter-nav="1">
                                             <div class="gdlr-core-block-item-title-wrap  gdlr-core-center-align gdlr-core-item-mglr">
                                                 <div class="gdlr-core-block-item-title-inner">
-                                                    <h3 class="gdlr-core-block-item-title" style="font-size: 38px ;text-transform: none ;">Estrutura e Profissionais nota 10</h3></div>
+                                                    <h3 class="gdlr-core-block-item-title" style="font-size: 38px ;text-transform: none ;"><strong class="titulo-azul-strong">Veja o que nossos clientes dizem</strong></h3></div>
                                                 <div class="gdlr-core-flexslider-nav gdlr-core-round-style gdlr-core-absolute-center gdlr-core-right"></div>
                                             </div>
                                             <ul class="slides">
+                                                @foreach ($listaDepo as $linha)
+                                                
+                                                @php
+
+                                                    //Responsável relacionado com depoimento
+                                                    $responsavel = $linha->DepoResponsavel;
+                                                @endphp
+
                                                 <li class="gdlr-core-item-mglr">
                                                     <div class="gdlr-core-testimonial clearfix">
                                                         <div class="gdlr-core-testimonial-content-wrap">
+                                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 34px;">{{ $linha->titulo_depoimentos }}</h3>
                                                             <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Meu filho Henrique entrou na escolinha super tímido e com dificuldade de se enturmar. Em apenas três meses, a mudança foi da água para o vinho! Os professores são extremamente pacientes e pedagógicos. Ele não só melhorou a coordenação motora, mas aprendeu a trabalhar em equipe e ganhou uma autoconfiança linda de ver. Recomendo de olhos fechados!</p>
+                                                                <p>{{ $linha->texto_depoimentos }}</p>
                                                             </div>
                                                             <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="color: #ffffff ;">&#8220;</div>
                                                             <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src="{{asset('atlas/upload/foto-de-perfil.png')}}" alt="" width="150" height="150" title="personnel-4"></div>
+                                                                <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src="{{asset('atlas/upload/' . $linha->foto_depoimentos )}}" alt="" width="150" height="150" title="{{ $responsavel->nome_responsavel }}"></div>
                                                                 <div class="gdlr-core-testimonial-author-content">
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title">Mariana Souza</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px ;">mãe de Henrique</div>
+                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title"></div>
+                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px ;">{{ $linha->relacao_autor_depoimentos }}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="gdlr-core-item-mglr">
-                                                    <div class="gdlr-core-testimonial clearfix">
-                                                        <div class="gdlr-core-testimonial-content-wrap">
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Meu filho Henrique entrou na escolinha super tímido e com dificuldade de se enturmar. Em apenas três meses, a mudança foi da água para o vinho! Os professores são extremamente pacientes e pedagógicos. Ele não só melhorou a coordenação motora, mas aprendeu a trabalhar em equipe e ganhou uma autoconfiança linda de ver. Recomendo de olhos fechados!</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="color: #ffffff ;">&#8220;</div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src="{{asset('atlas/upload/foto-de-perfil.png')}}" alt="" width="150" height="150" title="personnel-4"></div>
-                                                                <div class="gdlr-core-testimonial-author-content">
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title">Mariana Souza</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px ;">mãe de Henrique</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="gdlr-core-item-mglr">
-                                                    <div class="gdlr-core-testimonial clearfix">
-                                                        <div class="gdlr-core-testimonial-content-wrap">
-                                                            <div class="gdlr-core-testimonial-content gdlr-core-info-font gdlr-core-skin-content" style="font-size: 18px ;">
-                                                                <p>Meu filho Henrique entrou na escolinha super tímido e com dificuldade de se enturmar. Em apenas três meses, a mudança foi da água para o vinho! Os professores são extremamente pacientes e pedagógicos. Ele não só melhorou a coordenação motora, mas aprendeu a trabalhar em equipe e ganhou uma autoconfiança linda de ver. Recomendo de olhos fechados!</p>
-                                                            </div>
-                                                            <div class="gdlr-core-testimonial-quote gdlr-core-quote-font gdlr-core-skin-icon" style="color: #ffffff ;">&#8220;</div>
-                                                            <div class="gdlr-core-testimonial-author-wrap clearfix">
-                                                                <div class="gdlr-core-testimonial-author-image gdlr-core-media-image"><img src="{{asset('atlas/upload/foto-de-perfil.png')}}" alt="" width="150" height="150" title="personnel-4"></div>
-                                                                <div class="gdlr-core-testimonial-author-content">
-                                                                    <div class="gdlr-core-testimonial-title gdlr-core-title-font gdlr-core-skin-title">Mariana Souza</div>
-                                                                    <div class="gdlr-core-testimonial-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px ;">mãe de Henrique</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
