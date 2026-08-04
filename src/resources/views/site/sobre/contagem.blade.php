@@ -1,6 +1,6 @@
                     <div class="gdlr-core-pbf-wrapper " style="padding: 130px 0px 100px 0px;" data-skin="Dark">
                         <div class="gdlr-core-pbf-background-wrap" style="background-color: #3a3a3a ;">
-                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/soccer-game-concept.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.2"></div>
+                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(atlas/upload/soccer-game-concept.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed="0.2"></div>
                         </div>
                         <div class="gdlr-core-pbf-wrapper-content gdlr-core-js " data-gdlr-animation="fadeInUp" data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
                             <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">

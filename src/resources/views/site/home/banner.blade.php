@@ -9,8 +9,11 @@
                                         <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
                                             <rs-module id="rev_slider_1_1" style="display:none;" data-version="6.1.5">
                                                 <rs-slides>
+                                                    
+                                                    <!-- Índice identifica cada slide individualmente -->
                                                     @foreach($listaBanners as $indice => $linha)
 
+                                                        <!-- Cada slide do banner é o valor de índice, adicionando 1 para que o primeiro slide seja 1, o segundo seja 2 e assim por diante -->
                                                         @php($slide = $indice + 1)
 
                                                         <rs-slide data-key="rs-{{ $slide }}" data-title="Slide" data-thumb="#" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
@@ -32,7 +35,7 @@
                                                             <!--
 
                                                             -->
-                                                            <rs-layer id="slider-1-slide-{{ $slide }}-layer-7" class="rev-btn" data-type="button" data-actions="o:click;a:simplelink; target:_self;url:{{route('home')}}" data-color="#0054a6" data-xy="xo:733px,628px,628px,242px;yo:606px,606px,606px,327px;" data-text="s:13;l:17;fw:700;a:center;" data-rsp_bd="off" data-padding="t:15,15,15,12;r:36,36,36,28;b:15,15,15,12;l:36,36,36,28;" data-border="bor:30px,30px,30px,30px;" data-frame_0="tp:600;" data-frame_1="tp:600;st:1170;sR:1170;" data-frame_999="o:0;tp:600;st:w;sR:7530;" data-frame_hover="c:#fff;bgc:#0054a6;boc:#000;bor:30px,30px,30px,30px;bos:solid;oX:50;oY:50;sp:150;" style="z-index:12;background-color:#ffffff;font-family:Jost;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;text-transform:uppercase;">{{ $linha->texto_botao2_banner }}
+                                                            <rs-layer id="slider-1-slide-{{ $slide }}-layer-7" class="rev-btn" data-type="button" data-actions="o:click;a:simplelink; target:_self;url:{{route('contato')}}" data-color="#0054a6" data-xy="xo:733px,628px,628px,242px;yo:606px,606px,606px,327px;" data-text="s:13;l:17;fw:700;a:center;" data-rsp_bd="off" data-padding="t:15,15,15,12;r:36,36,36,28;b:15,15,15,12;l:36,36,36,28;" data-border="bor:30px,30px,30px,30px;" data-frame_0="tp:600;" data-frame_1="tp:600;st:1170;sR:1170;" data-frame_999="o:0;tp:600;st:w;sR:7530;" data-frame_hover="c:#fff;bgc:#0054a6;boc:#000;bor:30px,30px,30px,30px;bos:solid;oX:50;oY:50;sp:150;" style="z-index:12;background-color:#ffffff;font-family:Jost;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;text-transform:uppercase;">{{ $linha->texto_botao2_banner }}
                                                             </rs-layer>
                                                             <!--
 

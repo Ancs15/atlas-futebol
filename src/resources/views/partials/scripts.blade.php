@@ -116,6 +116,8 @@
                     editorheight: "900,768,960,500",
                     responsiveLevels: "1240,1240,1240,480",
                     disableProgressBar: "on",
+                    autoPlay: "on",
+                    delay: 5000,
                     navigation: {
                         mouseScrollNavigation: false,
                         onHoverStop: false,

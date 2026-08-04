@@ -25,7 +25,7 @@
                                 <div class="gdlr-core-pbf-column gdlr-core-column-15">
                                     <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " data-sync-height="height-1" data-sync-height-center="">
                                         <div class="gdlr-core-pbf-background-wrap">
-                                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/male-football-player-field-rain.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed="0"></div>
+                                            <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(atlas/upload/male-football-player-field-rain.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed="0"></div>
                                         </div>
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content"></div>
                                     </div>
@@ -37,7 +37,7 @@
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
                                                     <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                                                        <a class="gdlr-core-ilightbox gdlr-core-js " href="upload/about-icon-5.png" data-type="image"><img src="upload/about-icon-5.png" alt="" width="60" height="75" title="about-icon-5"><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon  gdlr-core-size-22 fa fa-search"></i></span></a>
+                                                        <a class="gdlr-core-ilightbox gdlr-core-js " href="{{ asset('atlas/upload/about-icon-5.png') }}" data-type="image"><img src="{{ asset('atlas/upload/about-icon-5.png') }}" alt="" width="60" height="75" title="about-icon-5"><span class="gdlr-core-image-overlay "><i class="gdlr-core-image-overlay-icon  gdlr-core-size-22 fa fa-search"></i></span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -51,7 +51,7 @@
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;">
                                                     <div class="gdlr-core-text-box-item-content">
                                                         <p>Muito mais do que ensinar futebol, desenvolvemos disciplina, respeito e trabalho em equipe para preparar nossos atletas dentro e fora de campo.</p>
-                                                        <p><a style="font-weight: 800; font-size: 13px; letter-spacing: 2px;" href="contact.html">QUERO ME MATRICULAR</a></p>
+                                                        <p><a style="font-weight: 800; font-size: 13px; letter-spacing: 2px;" href="{{ route('contato')}}">QUERO ME MATRICULAR</a></p>
                                                     </div>
                                                 </div>
                                             </div>

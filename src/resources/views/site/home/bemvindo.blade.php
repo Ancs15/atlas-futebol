@@ -34,7 +34,7 @@
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
-                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border botao-matricula" href="{{route('home')}}"><span class="gdlr-core-content">Fazer Matrícula</span></a></div>
+                                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><a class="gdlr-core-button  gdlr-core-button-gradient gdlr-core-button-no-border botao-matricula" href="{{route('contato')}}"><span class="gdlr-core-content">Fazer Matrícula</span></a></div>
                                             </div>
                                         </div>
                                     </div>

@@ -4,7 +4,7 @@
             <div class="bigslam-mobile-header-container bigslam-container">
                 <div class="bigslam-logo  bigslam-item-pdlr">
                     <div class="bigslam-logo-inner">
-                        <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/ATLAS-halflogo.png') }}" alt="Logo" width="200" height="191"></a>
+                        <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/' . $LogoAtiva->link_logo) }}" alt="{{ $LogoAtiva->nome_logo }}" width="200" height="191"></a>
                     </div>
                 </div>
                 <div class="bigslam-mobile-menu-right">
@@ -69,7 +69,7 @@
                                         <li class="menu-item"><a href="league-table.html">League Table</a></li>
                                     </ul>
                                 </li> -->
-                                <li class="menu-item menu-item-has-children"><a href="{{route('home')}}">Contato</a>
+                                <li class="menu-item menu-item-has-children"><a href="{{route('contato')}}">Contato</a>
                                     <!-- <ul class="sub-menu">
                                         <li class="menu-item menu-item-has-children"><a href="#">About</a>
                                             <ul class="sub-menu">
@@ -229,14 +229,14 @@
                         <div class="bigslam-header-container-inner clearfix">
                             <div class="bigslam-logo  bigslam-item-pdlr">
                                 <div class="bigslam-logo-inner">
-                                    <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/ATLAS-halflogo.png') }}" alt="Logo" width="200" height="191"></a>
+                                    <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/' . $LogoAtiva->link_logo) }}" alt="{{ $LogoAtiva->nome_logo }}" width="200" height="191"></a>
                                 </div>
                             </div>
                             <div class="bigslam-navigation bigslam-item-pdlr clearfix ">
                                 <div class="bigslam-main-menu" id="bigslam-main-menu">
                                     <ul id="menu-main-navigation-1" class="sf-menu">
-                                        <li class="menu-item menu-item-home current-menu-item bigslam-normal-menu"><a href="{{route('home')}}">Home</a></li>
-                                        <li class="menu-item menu-item-has-children bigslam-normal-menu"><a href="{{route('sobre')}}" class="sf-with-ul-pre">Sobre</a>
+                                        <li class="menu-item menu-item-home {{ request()->RouteIs('home') ? 'current-menu-item' : '' }} bigslam-normal-menu"><a href="{{route('home')}}">Home</a></li>
+                                        <li class="menu-item {{ request()->RouteIs('sobre') ? 'current-menu-item' : '' }} bigslam-normal-menu"><a href="{{route('sobre')}}" class="sf-with-ul-pre">Sobre</a>
                                             <!-- SUB-MENU DESATIVADO -->
 
                                             <!-- <ul class="sub-menu">
@@ -246,7 +246,7 @@
                                                 <li class="menu-item" data-size="60"><a href="schedule-widget-style.html">Schedule – Widget Style</a></li>
                                             </ul> -->
                                         </li>
-                                        <li class="menu-item menu-item-has-children bigslam-normal-menu"><a href="{{route('home')}}" class="sf-with-ul-pre">Jogadores</a>
+                                        <li class="menu-item bigslam-normal-menu"><a href="{{route('home')}}" class="sf-with-ul-pre">Jogadores</a>
                                             <!-- <ul class="sub-menu">
                                                 <li class="menu-item" data-size="60"><a href="player-list-default-style.html">Player List – Default Style</a></li>
                                                 <li class="menu-item" data-size="60"><a href="{{route('home')}}">Player List – Gallery</a></li>
@@ -254,7 +254,7 @@
                                                 <li class="menu-item" data-size="60"><a href="player-list-style-2.html">Player List – Style 2</a></li>
                                             </ul> -->
                                         </li>
-                                        <li class="menu-item  bigslam-normal-menu"><a href="{{route('home')}}">Equipe</a></li>
+                                        <li class="menu-item bigslam-normal-menu"><a href="{{route('home')}}">Equipe</a></li>
 
                                         <!-- SPORTPRESS DESABILITADA -->
 
@@ -282,7 +282,7 @@
                                                 <li class="menu-item" data-size="60"><a href="league-table.html">League Table</a></li>
                                             </ul>
                                         </li> -->
-                                        <li class="menu-item menu-item-has-children bigslam-normal-menu"><a href="contact.html" class="sf-with-ul-pre">Contato</a>
+                                        <li class="menu-item {{ request()->RouteIs('contato') ? 'current-menu-item' : '' }} bigslam-normal-menu"><a href="{{ route('contato') }}" class="sf-with-ul-pre">Contato</a>
                                             <!-- SUB-MENU DESATIVADO -->
 
                                             <!-- <ul class="sub-menu">

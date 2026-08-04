@@ -168,21 +168,21 @@
     margin-bottom: 40px;
 }
 
-/* SCHEDULE */
+/* SOBRE */
 
 .bigslam-page-title-wrap {
-    background-image: url(/upload/wc26-banner2.png);
+    background-image: url(../upload/rugby-sport-environment-filed.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .bigslam-page-title-wrap 
 .bigslam-page-title {
-    /* background: linear-gradient(to right, #0d4fb9 27.5%, #df1047, #07b880 74%);
+    background: linear-gradient(to top, #15bce6, #0747ad);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  */
-    color: #f33080; 
+    -webkit-text-fill-color: transparent;
+    color: black;
 }
 
 .bigslam-body a {
@@ -190,7 +190,7 @@
 }
 
 .bigslam-body a:hover {
-    color: #f02e61;
+    color: #0747ad;
 }
 
 #map {
@@ -222,3 +222,7 @@
 }
 
 /* CONTATO */
+
+.submit-button {
+    background-color: #005391;
+}

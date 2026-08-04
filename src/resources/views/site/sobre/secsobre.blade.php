@@ -8,7 +8,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content" data-gdlr-animation="fadeInDown" data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="upload/icons8-cone-de-obras-50.png" alt="" width="64" height="64" title="004-strategy"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{ asset('atlas/upload/icons8-cone-de-obras-50.png') }}" alt="" width="64" height="64" title="004-strategy"></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
@@ -33,7 +33,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content" data-gdlr-animation="fadeInDown" data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="upload/icons8-bola-de-futebol-2-64.png" alt="" width="64" height="64" title="002-basketball"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{ asset('atlas/upload/icons8-bola-de-futebol-2-64.png') }}" alt="" width="64" height="64" title="002-basketball"></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
@@ -58,7 +58,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content" data-gdlr-animation="fadeInDown" data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="upload/icons8-festival-50.png" alt="" width="64" height="64" title="003-basketball-player"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{ asset('atlas/upload/icons8-festival-50.png') }}" alt="" width="64" height="64" title="003-basketball-player"></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">
@@ -83,7 +83,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content" data-gdlr-animation="fadeInDown" data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-image-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr" style="padding-bottom: 40px ;">
-                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="upload/004-strategy.png" alt="" width="64" height="64" title="001-player-jamming"></div>
+                                                    <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src="{{ asset('atlas/upload/004-strategy.png') }}" alt="" width="64" height="64" title="001-player-jamming"></div>
                                                 </div>
                                             </div>
                                             <div class="gdlr-core-pbf-element">

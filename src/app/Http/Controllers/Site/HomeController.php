@@ -4,6 +4,8 @@
 namespace App\Http\Controllers\Site;
 //  CHAMA O ARQUIVO CONTROLLER
 use App\Http\Controllers\Controller;
+//CHAMA O ARQUIVO LOGO
+use App\Models\Logo;
 // CHAMA O ARQUIVO BANNER
 use App\Models\Banner;
 // CHAMA O ARQUIVO CATEGORIA
@@ -17,6 +19,10 @@ class HomeController extends Controller {
 
     //CHAMA A PÁGINA PRINCIPAL
     public function home() {
+
+        //CHAMA O ARQUIVO LOGO
+        $LogoAtiva = Logo::where('status_logo', 'ATIVO')->first();
+        // dd($LogoAtiva);
 
         // CHAMA O ARQUIVO BANNER
         $listaBanners = Banner::where('status_banner', 'ATIVO')->inRandomOrder()->get();
@@ -41,7 +47,7 @@ class HomeController extends Controller {
         // dd($listaDepo->toArray());
 
         // RETORNA A PÁGINA HOME COM A LISTA DE BANNERS E CATEGORIAS
-        return view('site.home.home', compact('listaBanners', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaDepo'));
+        return view('site.home.home', compact('LogoAtiva', 'listaBanners', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaDepo'));
     }
 
 }
