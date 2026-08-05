@@ -223,6 +223,21 @@
 
 /* CONTATO */
 
+/*
+.gdlr-core-title-item-title .gdlr-core-skin-title {
+    font-size: 75px ;
+    letter-spacing: 0px ;
+    text-transform: none ;  
+    color: #0747ad;
+}
+
+.gdlr-core-title-item-caption .gdlr-core-info-font .gdlr-core-skin-caption {
+    font-size: 25px;
+    margin-top: 25px; 
+    color: #dfdbdb;
+}
+*/
+
 .submit-button {
     background-color: #005391;
 }
