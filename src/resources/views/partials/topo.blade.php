@@ -4,7 +4,7 @@
             <div class="bigslam-mobile-header-container bigslam-container">
                 <div class="bigslam-logo  bigslam-item-pdlr">
                     <div class="bigslam-logo-inner">
-                        <a href="{{route('home')}}"><img src="{{ asset('atlas/upload/' . $LogoAtiva->link_logo) }}" alt="{{ $LogoAtiva->nome_logo }}" width="200" height="191"></a>
+                        <a href="{{ route('home')}}"><img src="{{ asset('atlas/upload/' . $LogoAtiva->link_logo) }}" alt="{{ $LogoAtiva->nome_logo }}" width="200" height="191"></a>
                     </div>
                 </div>
                 <div class="bigslam-mobile-menu-right">
@@ -44,7 +44,7 @@
                                         <li class="menu-item"><a href="player-list-style-2.html">Player List – Style 2</a></li>
                                     </ul> -->
                                 </li>
-                                <li class="menu-item "><a href="{{route('home')}}">Equipe</a></li>
+                                <li class="menu-item "><a href="{{route('equipe')}}">Equipe</a></li>
                                 <!-- <li class="menu-item menu-item-has-children"><a href="#">SportsPress</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item menu-item-has-children"><a href="#">Game</a>
@@ -254,7 +254,7 @@
                                                 <li class="menu-item" data-size="60"><a href="player-list-style-2.html">Player List – Style 2</a></li>
                                             </ul> -->
                                         </li>
-                                        <li class="menu-item bigslam-normal-menu"><a href="{{route('home')}}">Equipe</a></li>
+                                        <li class="menu-item {{ request()->routeIs('equipe') ? 'current-menu-item' : ''}} bigslam-normal-menu"><a href="{{route('equipe')}}">Equipe</a></li>
 
                                         <!-- SPORTPRESS DESABILITADA -->
 

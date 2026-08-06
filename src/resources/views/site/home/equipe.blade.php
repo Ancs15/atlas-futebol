@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                                 <div class="gdlr-core-pbf-element">
-                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="player-list-gallery.html" style="font-size: 17px ;font-weight: 500 ;letter-spacing: 0px ;color: #ffffff ;padding: 0px 0px 0px 0px;text-transform: none ;"><span class="gdlr-core-content">Ver Toda a Equipe</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #ffffff ;"></i></a></div>
+                                    <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href="{{ route('equipe')}}" style="font-size: 17px ;font-weight: 500 ;letter-spacing: 0px ;color: #ffffff ;padding: 0px 0px 0px 0px;text-transform: none ;"><span class="gdlr-core-content">Ver Toda a Equipe</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #ffffff ;"></i></a></div>
                                 </div>
                             </div>
                         </div>

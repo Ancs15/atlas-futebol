@@ -26,4 +26,10 @@ Class Usuario extends Model{
     public function UsuarioResponsavel(){
         return $this->hasOne(Responsavel::class, 'id_usuario', 'id_usuario');
     }
+
+    //Um Login pertence a um Professor
+
+    public function UsuarioProfessor() {
+        return $this->hasOne(Professores::class, 'id_usuario', 'id_usuario');
+    }
 }
