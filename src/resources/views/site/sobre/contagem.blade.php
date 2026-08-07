@@ -36,7 +36,7 @@
                                         <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                             <div class="gdlr-core-pbf-element">
                                                 <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 10px ;">
-                                                    <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 49px ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration="4000" data-counter-start="0" data-counter-end="12">0</span></div>
+                                                    <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 49px ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration="4000" data-counter-start="0" data-counter-end="{{ $listaEquipe->count() }}">0</span></div>
                                                     <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 18px ;text-transform: none ;">Professores</div>
                                                 </div>
                                             </div>

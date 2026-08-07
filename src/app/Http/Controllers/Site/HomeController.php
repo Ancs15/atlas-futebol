@@ -13,6 +13,7 @@ use App\Models\Categoria;
 use App\Models\Depoimentos;
 use App\Models\Galeria;
 use App\Models\Parceiros;
+use App\Models\Professores;
 
 // CRIA A CLASSE HOME CONTROLLER
 class HomeController extends Controller {
@@ -39,6 +40,9 @@ class HomeController extends Controller {
         $listaGaleria = Galeria::where('status_galeria', 'ATIVO')->orderBy('titulo_galeria', 'ASC')->get();
         // dd($listaGaleria);
 
+        $listaEquipe = Professores::where('status_professores', 'ATIVO')->inrandomOrder()->get();
+        //dd($listaEquipe);
+
         $listaDepo = Depoimentos::with('DepoResponsavel')
                         ->where('status_depoimentos', 'APROVADO')
                         ->inRandomOrder()
@@ -47,7 +51,7 @@ class HomeController extends Controller {
         // dd($listaDepo->toArray());
 
         // RETORNA A PÁGINA HOME COM A LISTA DE BANNERS E CATEGORIAS
-        return view('site.home.home', compact('LogoAtiva', 'listaBanners', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaDepo'));
+        return view('site.home.home', compact('LogoAtiva', 'listaBanners', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaEquipe', 'listaDepo'));
     }
 
 }

@@ -27,118 +27,25 @@
                                                     <div class="gdlr-core-flexslider flexslider gdlr-core-js-2 " data-type="carousel" data-column="3" data-nav="navigation-top" data-nav-parent="self">
                                                         <div class="gdlr-core-flexslider-custom-nav  gdlr-core-style-navigation-top gdlr-core-right-align" style="margin-bottom: 50px ;"><i class="fa5s fa5-arrow-left flex-prev" style="color: #9b9b9b ;background-color: #ffffff ;padding: 17px;border-radius: 40px;-moz-border-radius: 40px;-webkit-border-radius: 40px;font-size: 17px ;margin-right: 8px ;"></i><i class="fa5s fa5-arrow-right flex-next" style="color: #9b9b9b ;background-color: #ffffff ;padding: 17px;border-radius: 40px;-moz-border-radius: 40px;-webkit-border-radius: 40px;font-size: 17px ;"></i></div>
                                                         <ul class="slides">
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="photodune-3281784-soccer-player-m-red-2"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
+                                                            @foreach($listaEquipe as $linha)
+                                                                <li class="gdlr-core-item-mglr">
+                                                                    <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
+                                                                        <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
+                                                                            <a class="gdlr-core-sp-player-link" href="{{route('equipe')}}"><img src="{{asset('atlas/upload/' . $linha->foto_professores )}}" alt="{{ $linha->nome_professores }}" width="700" height="577" title="{{ $linha->nome_professores }}"></a>
+                                                                        </div>
+                                                                        <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
+                                                                            <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
+                                                                            <div class="gdlr-core-sp-player-content">
+                                                                                <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('equipe')}}">{{ $linha->nome_professores }}</a></h3>
+                                                                                <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">{{ $linha->tipo_professores }}</div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="Georginio-Wijnaldum"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="Joe-Gomez"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="Naby-Keita"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="Roberto-Firmino-1"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="salah"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="James-Milner"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="gdlr-core-item-mglr">
-                                                                <div class="gdlr-core-sp-player-grid-3 gdlr-core-item-mgb">
-                                                                    <div class="gdlr-core-sp-player-thumbnail gdlr-core-media-image gdlr-core-zoom-on-hover">
-                                                                        <a class="gdlr-core-sp-player-link" href="{{route('home')}}"><img src="{{asset('atlas/upload/equipe.jpg')}}" alt="" width="700" height="577" title="origi"></a>
-                                                                    </div>
-                                                                    <div class="gdlr-core-sp-player-content-wrap  gdlr-core-skin-e-background clearfix">
-                                                                        <!-- <div class="gdlr-core-sp-player-number gdlr-core-title-font gdlr-core-skin-e-content">10</div> -->
-                                                                        <div class="gdlr-core-sp-player-content">
-                                                                            <h3 class="gdlr-core-sp-player-title gdlr-core-skin-title"><a class="gdlr-core-sp-player-link" href="{{route('home')}}">Professor Oliveira</a></h3>
-                                                                            <div class="gdlr-core-sp-player-position gdlr-core-skin-caption">Preparador Físico</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
+                                                                </li>
+                                                            @endforeach
+
+
+
                                                         </ul>
                                                     </div>
                                                 </div>
