@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Logo;
 // CHAMA O ARQUIVO BANNER
 use App\Models\Banner;
+use App\Models\SobreSecao;
 // CHAMA O ARQUIVO CATEGORIA
 use App\Models\Categoria;
 use App\Models\Depoimentos;
@@ -27,6 +28,9 @@ class HomeController extends Controller {
 
         // CHAMA O ARQUIVO BANNER
         $listaBanners = Banner::where('status_banner', 'ATIVO')->inRandomOrder()->get();
+
+        $SecaoSobreAtiva = SobreSecao::where('status_sobre_secao', 'ATIVO')->first();
+        //dd($SecaoSobreAtiva);
 
         // CHAMA O ARQUIVO CATEGORIA
         $listaCategorias = Categoria::where('status_categoria', 'ATIVO')->get();
@@ -51,7 +55,7 @@ class HomeController extends Controller {
         // dd($listaDepo->toArray());
 
         // RETORNA A PÁGINA HOME COM A LISTA DE BANNERS E CATEGORIAS
-        return view('site.home.home', compact('LogoAtiva', 'listaBanners', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaEquipe', 'listaDepo'));
+        return view('site.home.home', compact('LogoAtiva', 'listaBanners', 'SecaoSobreAtiva', 'listaCategorias', 'listaGaleria', 'listaParceiros', 'listaEquipe', 'listaDepo'));
     }
 
 }
