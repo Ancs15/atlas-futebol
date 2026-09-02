@@ -31,4 +31,8 @@ Class Responsavel extends Model{
         return $this->hasMany(Depoimentos::class, 'id_cliente', 'id_responsavel');
     }
 
+    public function ResponsavelAluno() {
+        return $this->hasMany(Aluno::class, 'id_responsavel', 'id_responsavel');
+    }
+
 }

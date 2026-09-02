@@ -19,4 +19,8 @@ class Categoria extends Model {
         'link_saibamais_categoria',
         'status_categoria',
     ];
+
+    public function CategoriaTurma() {
+        return $this->hasMany(Turma::class, 'id_categoria', 'id_categoria');
+    }
 }

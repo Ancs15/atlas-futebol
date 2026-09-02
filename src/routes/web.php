@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\SobreController;
 use App\Http\Controllers\Site\EquipeController;
@@ -13,3 +14,4 @@ Route::get('/equipe', [EquipeController::class, 'equipe'])->name('equipe');
 Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 
 Route::get('/dashboard', [AdminController::class, 'admin'])->name('admin');
+Route::get('/admin/usuarios', [UsuarioController::class, 'index'])->name('admin.usuario.index');

@@ -37,13 +37,13 @@
             action="./pages/search-results.html"
           >
             <div class="input-group input-group-sm">
-              <label for="navbar-search-input" class="visually-hidden">Search</label>
+              <label for="navbar-search-input" class="visually-hidden">Buscar</label>
               <input
                 type="search"
                 id="navbar-search-input"
                 name="q"
                 class="form-control"
-                placeholder="Search…"
+                placeholder="Buscar..."
               />
               <button class="btn btn-outline-secondary" type="submit" aria-label="Submit search">
                 <i class="bi bi-search" aria-hidden="true"></i>

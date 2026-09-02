@@ -115,4 +115,7 @@
       integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
       crossorigin="anonymous"
     />
+
+    {{-- estilo principal --}}
+    <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
   </head>

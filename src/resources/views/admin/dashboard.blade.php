@@ -1,5 +1,5 @@
 @extends('layout.dash')
 
 @section('content')
-    <h2>DASHBOARD</h2>
+    @include('admin.cards')
 @endsection
