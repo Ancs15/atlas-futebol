@@ -10,6 +10,11 @@ class Categoria extends Model {
 
     public $timestamps = false;
 
+    protected $casts = [
+        'horario_inicio_categoria' => 'datetime',
+        'horario_fim_categoria' => 'datetime',
+    ];
+
     protected $fillable = [
         'nome_categoria',
         'faixa_etaria_categoria',

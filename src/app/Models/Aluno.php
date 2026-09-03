@@ -29,4 +29,8 @@ Class Aluno extends Model {
         return $this->belongsTo(Responsavel::class, 'id_responsavel', 'id_responsavel');
     }
 
+    public function AlunoSolicitar() {
+        return $this->hasOne(SolicitarMatricula::class, 'id_aluno', 'id_aluno');
+    }
+
 }

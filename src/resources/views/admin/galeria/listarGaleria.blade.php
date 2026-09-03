@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Usuários</h1>
+                <h1 class="mb-0 fs-3">Galeria</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Usuários</li>
+                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Usuários cadastrados</h3>
+                        <h3 class="card-title">Imagens cadastrados</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Buscar usuários"
-                              aria-label="Buscar usuários"
+                              placeholder="Buscar imagens"
+                              aria-label="Buscar imagens"
                               style="width: 180px"
                             />
                           </div>
@@ -66,10 +66,10 @@
                             type="button"
                             class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#modal-add-usuario"
+                            data-bs-target="#modal-add-imagem"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo usuário
+                            Nova imagem
                           </button>
                         </div>
                       </div>
@@ -82,34 +82,43 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Imagem</th>
                             <th>Nome</th>
-                            <th>Email</th>
-                            <th>Senha</th>
-                            <th>Nível de Acesso</th>
                             <th>Status</th>
                             <th class="text-end">Ações</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaUsuario as $usuario)
+                          @forelse ($listaGaleria as $galeria)
                             <tr>
+                            {{-- Imagem --}}
                               <td>
-                                {{-- Nome --}}
+                                @if ($galeria->img_galeria)
+                                    <img 
+                                    src="{{ asset('atlas/upload/' . $galeria->img_galeria) }}" 
+                                    alt="{{ $galeria->titulo_galeria }}"
+                                    class="rounded"
+                                    style="
+                                      width: 100px;
+                                      height: 60px;
+                                      object-fit: cover;
+                                    "
+                                  >
+                                @else
+                                    <span class="text-muted">
+                                        Sem imagem
+                                    </span>
+                                @endif
+                              </td>
+                              <td>
+                                {{-- Título --}}
                                 <div class="d-flex align-items-center">
-                                  <span class="fw-medium">{{ $usuario->nome_usuario }}</span>
+                                  <span class="fw-medium">{{ $galeria->titulo_galeria }}</span>
                                 </div>
                               </td>
-                              {{-- Email --}}
-                              <td>{{ $usuario->email_usuario }}</td>
-                              {{-- Senha --}}
-                              <td>{{ $usuario->senha_usuario }}</td>
+                              {{-- Status --}}
                               <td>
-                                <span> 
-                                  {{ $usuario->tipo_usuario }}
-                                </span>
-                              </td>
-                              <td>
-                                @if ($usuario->status_usuario === 'ATIVO')
+                                @if ($galeria->status_galeria === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                                 @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -120,7 +129,7 @@
                                   <button
                                     type="button"
                                     class="btn btn-outline-secondary"
-                                    aria-label="Editar {{ $usuario->nome_usuario }}"
+                                    aria-label="Editar {{ $galeria->titulo_galeria }}"
                                   >
                                     <i class="bi bi-pencil" aria-hidden="true"> </i>
                                   </button>
@@ -128,8 +137,8 @@
                                     type="button"
                                     class="btn btn-outline-danger"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modal-delete-usuario"
-                                    aria-label="Deletar {{ $usuario->nome_usuario }}"
+                                    data-bs-target="#modal-delete-imagem"
+                                    aria-label="Deletar {{ $galeria->titulo_galeria }}"
                                   >
                                     <i class="bi bi-trash" aria-hidden="true"> </i>
                                   </button>
@@ -142,7 +151,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum usuário cadastrado.
+                              Nenhuma imagem cadastrado.
                             </td>
                           </tr>
                           @endforelse
@@ -155,9 +164,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de usuários:
+                      Total de imagens:
                       <strong>
-                        {{ $listaUsuario->count() }}
+                        {{ $listaGaleria->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

@@ -62,9 +62,9 @@
                 <!--begin::Small Box Widget 3-->
                 <div class="small-box text-bg-warning">
                   <div class="inner">
-                    <h3>44</h3>
+                    <h3>{{ $contarMatriculas }}</h3>
 
-                    <p>User Registrations</p>
+                    <p>Pedidos de Matrícula</p>
                   </div>
                   <svg
                     class="small-box-icon"

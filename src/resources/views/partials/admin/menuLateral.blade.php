@@ -54,35 +54,35 @@
               <li class="nav-header">GESTÃO ESCOLAR</li>
               <li class="nav-item">
                 <a href="{{ route('admin.usuario.index') }}" class="nav-link {{ request()->routeIs('admin.usuario.index') ? 'active' : ''}}">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Usuários</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.aluno.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>
                     Alunos
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.professores.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Professores</p>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Turmas</p>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Matrículas</p>
                 </a>
               </li>
@@ -90,13 +90,13 @@
               <li class="nav-header">PARTIDAS</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Partidas</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Times</p>
                 </a>
               </li>
@@ -104,49 +104,49 @@
               <li class="nav-header">SITE</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Logos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.banner.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Banners</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Sobre</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.categoria.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Categorias</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Avaliações</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.galeria.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Galeria</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.parceiros.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Parceiros</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Redes Sociais</p>
                 </a>
               </li>
@@ -154,13 +154,13 @@
               <li class="nav-header">NOTÍCIAS</li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Notícias</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                  <i class="nav-icon bi bi-circle"></i>
                   <p>Newsletter</p>
                 </a>
               </li>

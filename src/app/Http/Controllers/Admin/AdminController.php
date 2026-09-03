@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Aluno;
 use App\Models\Logo;
+use App\Models\SolicitarMatricula;
 use App\Models\Turma;
 
 Class AdminController extends Controller {
@@ -17,10 +18,10 @@ Class AdminController extends Controller {
 
         $contarAlunos = Aluno::where('status_aluno', 'ATIVO')->count();
         $contarTurmas = Turma::where('status_turma', 'ATIVO')->count();
-        //ESPAÇO PARA CONTAR MATRÍCULA
+        $contarMatriculas = SolicitarMatricula::where('status_solicitacao_matricula', 'PENDENTE')->count();
         //ESPAÇO PARA CONTAR PARTIDAS
 
-        return view('admin.dashboard', compact('LogoAtiva', 'contarAlunos', 'contarTurmas'));
+        return view('admin.dashboard', compact('LogoAtiva', 'contarAlunos', 'contarTurmas', 'contarMatriculas'));
 
     }
 

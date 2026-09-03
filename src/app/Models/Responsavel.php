@@ -35,4 +35,8 @@ Class Responsavel extends Model{
         return $this->hasMany(Aluno::class, 'id_responsavel', 'id_responsavel');
     }
 
+    public function ResponsavelSolicitar() {
+        return $this->hasMany(SolicitarMatricula::class, 'id_responsavel', 'id_responsavel');
+    }
+
 }

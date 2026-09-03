@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Usuários</h1>
+                <h1 class="mb-0 fs-3">Categorias</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Usuários</li>
+                    <li class="breadcrumb-item active" aria-current="page">Categorias</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Usuários cadastrados</h3>
+                        <h3 class="card-title">Categorias cadastrados</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Buscar usuários"
-                              aria-label="Buscar usuários"
+                              placeholder="Buscar categorias"
+                              aria-label="Buscar categorias"
                               style="width: 180px"
                             />
                           </div>
@@ -66,10 +66,10 @@
                             type="button"
                             class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#modal-add-usuario"
+                            data-bs-target="#modal-add-categoria"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo usuário
+                            Nova categoria
                           </button>
                         </div>
                       </div>
@@ -83,33 +83,34 @@
                         <thead>
                           <tr>
                             <th>Nome</th>
-                            <th>Email</th>
-                            <th>Senha</th>
-                            <th>Nível de Acesso</th>
+                            <th>Faixa Etária</th>
+                            <th>Descrição</th>
+                            <th>Horário de Abertura</th>
+                            <th>Horário de Encerramento</th>
                             <th>Status</th>
                             <th class="text-end">Ações</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaUsuario as $usuario)
+                          @forelse ($listaCategoria as $categoria)
                             <tr>
                               <td>
                                 {{-- Nome --}}
                                 <div class="d-flex align-items-center">
-                                  <span class="fw-medium">{{ $usuario->nome_usuario }}</span>
+                                  <span class="fw-medium">{{ $categoria->nome_categoria }}</span>
                                 </div>
                               </td>
-                              {{-- Email --}}
-                              <td>{{ $usuario->email_usuario }}</td>
-                              {{-- Senha --}}
-                              <td>{{ $usuario->senha_usuario }}</td>
+                                {{-- Faixa Etária --}}
+                              <td>{{ $categoria->faixa_etaria_categoria }}</td>
+                              {{-- Descrição --}}
+                              <td> {{ $categoria->descricao_foco_categoria }}</td>
+                              {{-- Horario A --}}
+                              <td>{{ $categoria->horario_inicio_categoria ? $categoria->horario_inicio_categoria->format('H:i A') : 'Nenhum horário encontrado' }}</td>
+                              {{-- Horário E --}}
+                              <td>{{ $categoria->horario_fim_categoria ? $categoria->horario_fim_categoria->format('H:i A') : 'Nenhum horário encontrado' }}</td>
+                              {{-- Status --}}
                               <td>
-                                <span> 
-                                  {{ $usuario->tipo_usuario }}
-                                </span>
-                              </td>
-                              <td>
-                                @if ($usuario->status_usuario === 'ATIVO')
+                                @if ($categoria->status_categoria === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                                 @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -120,7 +121,7 @@
                                   <button
                                     type="button"
                                     class="btn btn-outline-secondary"
-                                    aria-label="Editar {{ $usuario->nome_usuario }}"
+                                    aria-label="Editar {{ $categoria->nome_categoria }}"
                                   >
                                     <i class="bi bi-pencil" aria-hidden="true"> </i>
                                   </button>
@@ -128,8 +129,8 @@
                                     type="button"
                                     class="btn btn-outline-danger"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modal-delete-usuario"
-                                    aria-label="Deletar {{ $usuario->nome_usuario }}"
+                                    data-bs-target="#modal-delete-categoria"
+                                    aria-label="Deletar {{ $categoria->nome_categoria }}"
                                   >
                                     <i class="bi bi-trash" aria-hidden="true"> </i>
                                   </button>
@@ -142,7 +143,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum usuário cadastrado.
+                              Nenhuma categoria cadastrada.
                             </td>
                           </tr>
                           @endforelse
@@ -155,9 +156,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de usuários:
+                      Total de categorias:
                       <strong>
-                        {{ $listaUsuario->count() }}
+                        {{ $listaCategoria->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

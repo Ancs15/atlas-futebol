@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Usuários</h1>
+                <h1 class="mb-0 fs-3">Parceiros</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Usuários</li>
+                    <li class="breadcrumb-item active" aria-current="page">Parceiros</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Usuários cadastrados</h3>
+                        <h3 class="card-title">Parceiros cadastrados</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Buscar usuários"
-                              aria-label="Buscar usuários"
+                              placeholder="Buscar parceiros"
+                              aria-label="Buscar parceiros"
                               style="width: 180px"
                             />
                           </div>
@@ -66,10 +66,10 @@
                             type="button"
                             class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#modal-add-usuario"
+                            data-bs-target="#modal-add-parceiros"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo usuário
+                            Novo parceiro
                           </button>
                         </div>
                       </div>
@@ -82,34 +82,44 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Logo</th>
                             <th>Nome</th>
-                            <th>Email</th>
-                            <th>Senha</th>
-                            <th>Nível de Acesso</th>
+                            <th>Link</th>
                             <th>Status</th>
                             <th class="text-end">Ações</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaUsuario as $usuario)
+                          @forelse ($listaParceiros as $parceiros)
                             <tr>
+                            {{-- Logo --}}
                               <td>
-                                {{-- Nome --}}
+                                @if ($parceiros->logo_parceiros)
+                                    <img 
+                                    src="{{ asset('atlas/upload/' . $parceiros->logo_parceiros) }}" 
+                                    alt="{{ $parceiros->nome_parceiros }}"
+                                    class="rounded"
+                                    style="
+                                      width: 100px;
+                                      object-fit: cover;
+                                    "
+                                  >
+                                @else
+                                    <span class="text-muted">
+                                        Sem logo
+                                    </span>
+                                @endif
+                              </td>
+                              <td>
                                 <div class="d-flex align-items-center">
-                                  <span class="fw-medium">{{ $usuario->nome_usuario }}</span>
+                                  <span class="fw-medium">{{ $parceiros->nome_parceiros }}</span>
                                 </div>
                               </td>
-                              {{-- Email --}}
-                              <td>{{ $usuario->email_usuario }}</td>
-                              {{-- Senha --}}
-                              <td>{{ $usuario->senha_usuario }}</td>
+                              {{-- Link --}}
+                              <td>{{ $parceiros->link_site_parceiros }}</td>
+                              {{-- Status --}}
                               <td>
-                                <span> 
-                                  {{ $usuario->tipo_usuario }}
-                                </span>
-                              </td>
-                              <td>
-                                @if ($usuario->status_usuario === 'ATIVO')
+                                @if ($parceiros->status_parceiros === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                                 @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -120,7 +130,7 @@
                                   <button
                                     type="button"
                                     class="btn btn-outline-secondary"
-                                    aria-label="Editar {{ $usuario->nome_usuario }}"
+                                    aria-label="Editar {{ $parceiros->nome_parceiros }}"
                                   >
                                     <i class="bi bi-pencil" aria-hidden="true"> </i>
                                   </button>
@@ -128,8 +138,8 @@
                                     type="button"
                                     class="btn btn-outline-danger"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modal-delete-usuario"
-                                    aria-label="Deletar {{ $usuario->nome_usuario }}"
+                                    data-bs-target="#modal-delete-parceiros"
+                                    aria-label="Deletar {{ $parceiros->nome_parceiros }}"
                                   >
                                     <i class="bi bi-trash" aria-hidden="true"> </i>
                                   </button>
@@ -142,7 +152,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum usuário cadastrado.
+                              Nenhum parceiro cadastrado.
                             </td>
                           </tr>
                           @endforelse
@@ -155,9 +165,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de usuários:
+                      Total de parceiros:
                       <strong>
-                        {{ $listaUsuario->count() }}
+                        {{ $listaParceiros->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

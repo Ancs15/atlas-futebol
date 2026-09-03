@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Usuários</h1>
+                <h1 class="mb-0 fs-3">Alunos</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Usuários</li>
+                    <li class="breadcrumb-item active" aria-current="page">Alunos</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Usuários cadastrados</h3>
+                        <h3 class="card-title">Alunos cadastrados</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Buscar usuários"
-                              aria-label="Buscar usuários"
+                              placeholder="Buscar alunos"
+                              aria-label="Buscar alunos"
                               style="width: 180px"
                             />
                           </div>
@@ -66,10 +66,10 @@
                             type="button"
                             class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#modal-add-usuario"
+                            data-bs-target="#modal-add-alunos"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Novo usuário
+                            Novo alunos
                           </button>
                         </div>
                       </div>
@@ -82,34 +82,60 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Foto</th>
                             <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
                             <th>Email</th>
-                            <th>Senha</th>
-                            <th>Nível de Acesso</th>
+                            <th>Função</th>
                             <th>Status</th>
                             <th class="text-end">Ações</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaUsuario as $usuario)
+                          @forelse ($listaAlunos as $aluno)
                             <tr>
+                                {{-- Foto  --}}
+                              <td>
+                                @if ($aluno->foto_aluno)
+                                    <img 
+                                    src="{{ asset('atlas/upload/' . $aluno->foto_aluno) }}" 
+                                    alt="{{ $aluno->nome_aluno }}"
+                                    class="rounded"
+                                    style="
+                                      width: 100px;
+                                      height: 60px;
+                                      object-fit: cover;
+                                    "
+                                  >
+                                @else
+                                    <span class="text-muted">
+                                        Sem foto
+                                    </span>
+                                @endif
+                              </td>  
                               <td>
                                 {{-- Nome --}}
                                 <div class="d-flex align-items-center">
-                                  <span class="fw-medium">{{ $usuario->nome_usuario }}</span>
+                                  <span class="fw-medium">{{ $aluno->nome_aluno }}</span>
                                 </div>
                               </td>
+                                {{-- CPF --}}
+                              <td>{{ $aluno->cpf_aluno }}</td>
+                              {{-- Telefone --}}
+                              <td> {{ $aluno->telefone_aluno }}</td>
                               {{-- Email --}}
-                              <td>{{ $usuario->email_usuario }}</td>
-                              {{-- Senha --}}
-                              <td>{{ $usuario->senha_usuario }}</td>
+                              <td>{{ $aluno->email_aluno }}</td>
+                              {{-- Tipo --}}
                               <td>
+                            
                                 <span> 
-                                  {{ $usuario->tipo_usuario }}
+                                  {{ $aluno->tipo_aluno }}
                                 </span>
                               </td>
+                              {{-- Status --}}
                               <td>
-                                @if ($usuario->status_usuario === 'ATIVO')
+                                @if ($aluno->status_aluno === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                                 @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -120,7 +146,7 @@
                                   <button
                                     type="button"
                                     class="btn btn-outline-secondary"
-                                    aria-label="Editar {{ $usuario->nome_usuario }}"
+                                    aria-label="Editar {{ $aluno->nome_aluno }}"
                                   >
                                     <i class="bi bi-pencil" aria-hidden="true"> </i>
                                   </button>
@@ -128,8 +154,8 @@
                                     type="button"
                                     class="btn btn-outline-danger"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modal-delete-usuario"
-                                    aria-label="Deletar {{ $usuario->nome_usuario }}"
+                                    data-bs-target="#modal-delete-aluno"
+                                    aria-label="Deletar {{ $aluno->nome_aluno }}"
                                   >
                                     <i class="bi bi-trash" aria-hidden="true"> </i>
                                   </button>
@@ -157,7 +183,7 @@
                     <div class="float-start pt-1 fs-7 text-body-secondary">
                       Total de usuários:
                       <strong>
-                        {{ $listaUsuario->count() }}
+                        {{ $listaAlunos->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">
