@@ -4,7 +4,7 @@
 
                             <div class="bigslam-column-15 bigslam-column-first">
                                 <div class="sp-template sp-template-team-logo sp-template-logo sp-team-logo">
-                                    <img width="200" height="210" src="{{ asset('atlas/upload/logo/ATLAS.png')}}" class="attachment-sportspress-fit-icon size-sportspress-fit-icon wp-post-image" alt="Logo  do Atlas Futebol">
+                                    <img width="200" height="210" src="{{ asset('atlas/upload/logo/logo-atlas-completa.png')}}" class="attachment-sportspress-fit-icon size-sportspress-fit-icon wp-post-image" alt="Logo  do Atlas Futebol">
                                 </div>
                             </div>
 

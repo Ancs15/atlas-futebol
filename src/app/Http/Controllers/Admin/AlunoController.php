@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Logo;
 use App\Models\Aluno;
+use App\Models\Responsavel;
 
 Class AlunoController extends Controller {
 
@@ -19,7 +20,10 @@ Class AlunoController extends Controller {
                                                  ->orderbyDesc('id_aluno')
                                                                    ->get();
 
-        return view('admin.aluno.index', compact('listaAlunos', 'listaAlunos', 'LogoAtiva'));
+        $listaResponsaveis = Responsavel::orderbyDesc('id_responsavel')
+                                                                ->get();
+
+        return view('admin.aluno.index', compact('listaAlunos', 'listaResponsaveis', 'LogoAtiva'));
 
     }
 

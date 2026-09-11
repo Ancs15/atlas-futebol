@@ -82,6 +82,7 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Código</th>
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Senha</th>
@@ -93,6 +94,7 @@
                         <tbody>
                           @forelse ($listaUsuario as $usuario)
                             <tr>
+                              <td>{{ $usuario->id_usuario }}</td>
                               <td>
                                 {{-- Nome --}}
                                 <div class="d-flex align-items-center">

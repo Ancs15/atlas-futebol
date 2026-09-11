@@ -82,6 +82,7 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Código</th>
                             <th>Nome</th>
                             <th>Faixa Etária</th>
                             <th>Descrição</th>
@@ -94,6 +95,7 @@
                         <tbody>
                           @forelse ($listaCategoria as $categoria)
                             <tr>
+                              <td>{{ $categoria->id_categoria }}</td>
                               <td>
                                 {{-- Nome --}}
                                 <div class="d-flex align-items-center">

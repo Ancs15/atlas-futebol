@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Galeria</h1>
+                <h1 class="mb-0 fs-3">Logos</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+                    <li class="breadcrumb-item active" aria-current="page">Logos</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Imagens cadastrados</h3>
+                        <h3 class="card-title">Logos cadastradas</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Buscar imagens"
-                              aria-label="Buscar imagens"
+                              placeholder="Buscar logos"
+                              aria-label="Buscar logos"
                               style="width: 180px"
                             />
                           </div>
@@ -66,10 +66,10 @@
                             type="button"
                             class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#modal-add-imagem"
+                            data-bs-target="#modal-add-logos"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Nova imagem
+                            Nova logo
                           </button>
                         </div>
                       </div>
@@ -83,44 +83,42 @@
                         <thead>
                           <tr>
                             <th>Código</th>
-                            <th>Imagem</th>
+                            <th>Logo</th>
                             <th>Nome</th>
                             <th>Status</th>
                             <th class="text-end">Ações</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaGaleria as $galeria)
+                          @forelse ($listaLogos as $logo)
                             <tr>
-                              <td>{{ $galeria->id_galeria }}</td>
-                            {{-- Imagem --}}
+                            {{-- Logo --}}
+                              <td>{{ $logo->id_logo }}</td>
                               <td>
-                                @if ($galeria->img_galeria)
+                                @if ($logo->link_logo)
                                     <img 
-                                    src="{{ asset('atlas/upload/' . $galeria->img_galeria) }}" 
-                                    alt="{{ $galeria->titulo_galeria }}"
+                                    src="{{ asset('atlas/upload/' . $logo->link_logo) }}" 
+                                    alt="{{ $logo->nome_logo }}"
                                     class="rounded"
                                     style="
                                       width: 100px;
-                                      height: 60px;
                                       object-fit: cover;
                                     "
                                   >
                                 @else
                                     <span class="text-muted">
-                                        Sem imagem
+                                        Sem logo
                                     </span>
                                 @endif
                               </td>
                               <td>
-                                {{-- Título --}}
                                 <div class="d-flex align-items-center">
-                                  <span class="fw-medium">{{ $galeria->titulo_galeria }}</span>
+                                  <span class="fw-medium">{{ $logo->nome_logo }}</span>
                                 </div>
                               </td>
                               {{-- Status --}}
                               <td>
-                                @if ($galeria->status_galeria === 'ATIVO')
+                                @if ($logo->status_logo === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                                 @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -131,7 +129,7 @@
                                   <button
                                     type="button"
                                     class="btn btn-outline-secondary"
-                                    aria-label="Editar {{ $galeria->titulo_galeria }}"
+                                    aria-label="Editar {{ $logo->nome_logo }}"
                                   >
                                     <i class="bi bi-pencil" aria-hidden="true"> </i>
                                   </button>
@@ -139,8 +137,8 @@
                                     type="button"
                                     class="btn btn-outline-danger"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modal-delete-imagem"
-                                    aria-label="Deletar {{ $galeria->titulo_galeria }}"
+                                    data-bs-target="#modal-delete-logo"
+                                    aria-label="Deletar {{ $logo->nome_logo }}"
                                   >
                                     <i class="bi bi-trash" aria-hidden="true"> </i>
                                   </button>
@@ -153,7 +151,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhuma imagem cadastrado.
+                              Nenhuma logo cadastrada.
                             </td>
                           </tr>
                           @endforelse
@@ -166,9 +164,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de imagens:
+                      Total de logos:
                       <strong>
-                        {{ $listaGaleria->count() }}
+                        {{ $listaLogos->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

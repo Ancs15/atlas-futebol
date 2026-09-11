@@ -5,7 +5,7 @@
         <!--begin::Copyright-->
         <strong>
           Criado e desenvolvido por ANDRÉ SILVA {{ now()->format('Y') }} -
-          <a href="https://adminlte.io" class="text-decoration-none">ATLAS Futebol</a>.
+          <a href="https://adminlte.io" class="text-decoration-none">ATLAS Futebol</a>
         </strong>
         - Todos os direitos reservados.
         <!--end::Copyright-->

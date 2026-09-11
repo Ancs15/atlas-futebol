@@ -62,7 +62,7 @@
                 <a href="{{ route('admin.aluno.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-circle"></i>
                   <p>
-                    Alunos
+                    Alunos & Responsáveis
                   </p>
                 </a>
               </li>
@@ -74,7 +74,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.turma.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-circle"></i>
                   <p>Turmas</p>
                 </a>
@@ -103,7 +103,7 @@
 
               <li class="nav-header">SITE</li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.logo.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-circle"></i>
                   <p>Logos</p>
                 </a>
@@ -127,7 +127,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.depoimentos.index' ) }}" class="nav-link">
                   <i class="nav-icon bi bi-circle"></i>
                   <p>Avaliações</p>
                 </a>

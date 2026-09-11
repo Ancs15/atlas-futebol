@@ -11,6 +11,10 @@ Class Aluno extends Model {
 
     public $timestamps = false;
 
+    protected $casts = [
+        'data_nascimento_aluno' => 'date',
+    ];
+
     protected $fillable = [
         'id_turma',
         'id_responsavel',

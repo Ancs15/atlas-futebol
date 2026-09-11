@@ -82,6 +82,7 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Código</th>
                             <th>Foto</th>
                             <th>Nome</th>
                             <th>CPF</th>
@@ -95,6 +96,7 @@
                         <tbody>
                           @forelse ($listaProfessores as $professores)
                             <tr>
+                              <td>{{ $professores->id_professores }}</td>
                                 {{-- Foto  --}}
                               <td>
                                 @if ($professores->foto_professores)
@@ -168,7 +170,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhum usuário cadastrado.
+                              Nenhum professor cadastrado.
                             </td>
                           </tr>
                           @endforelse
@@ -181,7 +183,7 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de usuários:
+                      Total de professores:
                       <strong>
                         {{ $listaProfessores->count() }}
                       </strong>

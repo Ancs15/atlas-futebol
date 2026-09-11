@@ -7,13 +7,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Galeria</h1>
+                <h1 class="mb-0 fs-3">Turmas</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+                    <li class="breadcrumb-item active" aria-current="page">Turmas</li>
                   </ol>
                 </nav>
               </div>
@@ -36,7 +36,7 @@
                   <div class="card-header">
                     <div class="row g-2 align-items-center">
                       <div class="col-12 col-md-4">
-                        <h3 class="card-title">Imagens cadastrados</h3>
+                        <h3 class="card-title">Turmas cadastradas</h3>
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="d-flex flex-wrap justify-content-md-end gap-2">
@@ -48,8 +48,8 @@
                               type="search"
                               id="user-search"
                               class="form-control"
-                              placeholder="Buscar imagens"
-                              aria-label="Buscar imagens"
+                              placeholder="Buscar turmas"
+                              aria-label="Buscar turmas"
                               style="width: 180px"
                             />
                           </div>
@@ -66,10 +66,10 @@
                             type="button"
                             class="btn btn-sm btn-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#modal-add-imagem"
+                            data-bs-target="#modal-add-turma"
                           >
                             <i class="bi bi-person-plus-fill me-1" aria-hidden="true"> </i>
-                            Nova imagem
+                            Nova turma
                           </button>
                         </div>
                       </div>
@@ -83,44 +83,39 @@
                         <thead>
                           <tr>
                             <th>Código</th>
-                            <th>Imagem</th>
-                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Turma</th>
+                            <th>Horário</th>
+                            <th>Limite de Alunos</th>
                             <th>Status</th>
                             <th class="text-end">Ações</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @forelse ($listaGaleria as $galeria)
+                          @forelse ($listaTurma as $turma)
+
+                          @php
+
+                            $categoria = $turma->turmaCategoria;
+
+                          @endphp
                             <tr>
-                              <td>{{ $galeria->id_galeria }}</td>
-                            {{-- Imagem --}}
+                              <td>{{ $turma->id_turma }}</td>
+                                {{-- Categoria  --}}
+                              <td>{{ $categoria->nome_categoria ? $categoria->nome_categoria : 'Categoria não definida' }}</td>  
                               <td>
-                                @if ($galeria->img_galeria)
-                                    <img 
-                                    src="{{ asset('atlas/upload/' . $galeria->img_galeria) }}" 
-                                    alt="{{ $galeria->titulo_galeria }}"
-                                    class="rounded"
-                                    style="
-                                      width: 100px;
-                                      height: 60px;
-                                      object-fit: cover;
-                                    "
-                                  >
-                                @else
-                                    <span class="text-muted">
-                                        Sem imagem
-                                    </span>
-                                @endif
-                              </td>
-                              <td>
-                                {{-- Título --}}
+                                {{-- Turma --}}
                                 <div class="d-flex align-items-center">
-                                  <span class="fw-medium">{{ $galeria->titulo_galeria }}</span>
+                                  <span class="fw-medium">{{ $turma->nome_turma }}</span>
                                 </div>
                               </td>
+                                {{-- Horário --}}
+                              <td>{{ $turma->horario_turma ? $turma->horario_turma->format('H:i A') : 'Horário não definido' }}</td>
+                              {{-- Limite --}}
+                              <td> {{ $turma->limite_alunos_turma }}</td>
                               {{-- Status --}}
                               <td>
-                                @if ($galeria->status_galeria === 'ATIVO')
+                                @if ($turma->status_turma === 'ATIVO')
                                   <span class="badge text-bg-success">Ativo</span>
                                 @else
                                   <span class="badge text-bg-warning">Inativo</span>
@@ -131,7 +126,7 @@
                                   <button
                                     type="button"
                                     class="btn btn-outline-secondary"
-                                    aria-label="Editar {{ $galeria->titulo_galeria }}"
+                                    aria-label="Editar {{ $turma->nome_turma }}"
                                   >
                                     <i class="bi bi-pencil" aria-hidden="true"> </i>
                                   </button>
@@ -139,8 +134,8 @@
                                     type="button"
                                     class="btn btn-outline-danger"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modal-delete-imagem"
-                                    aria-label="Deletar {{ $galeria->titulo_galeria }}"
+                                    data-bs-target="#modal-delete-turma"
+                                    aria-label="Deletar {{ $turma->nome_turma }}"
                                   >
                                     <i class="bi bi-trash" aria-hidden="true"> </i>
                                   </button>
@@ -153,7 +148,7 @@
                                 colspan="5"
                                 class="text-center py-4 text-muted"
                             >
-                              Nenhuma imagem cadastrado.
+                              Nenhuma turma cadastrada.
                             </td>
                           </tr>
                           @endforelse
@@ -166,9 +161,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Total de imagens:
+                      Total de turmas:
                       <strong>
-                        {{ $listaGaleria->count() }}
+                        {{ $listaTurma->count() }}
                       </strong>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">

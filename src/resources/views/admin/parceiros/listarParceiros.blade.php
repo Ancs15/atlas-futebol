@@ -82,6 +82,7 @@
                       <table class="table table-hover align-middle m-0">
                         <thead>
                           <tr>
+                            <th>Código</th>
                             <th>Logo</th>
                             <th>Nome</th>
                             <th>Link</th>
@@ -93,6 +94,7 @@
                           @forelse ($listaParceiros as $parceiros)
                             <tr>
                             {{-- Logo --}}
+                              <td>{{ $parceiros->id_parceiros }}</td>
                               <td>
                                 @if ($parceiros->logo_parceiros)
                                     <img 

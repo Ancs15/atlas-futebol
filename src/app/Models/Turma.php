@@ -11,6 +11,10 @@ Class Turma extends Model {
     
     public $timestamps = false;
 
+    protected $casts = [
+        'horario_turma' => 'datetime',
+    ];
+
     protected $fillable = [
         'id_categoria',
         'nome_turma',
